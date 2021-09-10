@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css">
+    <title>Lista de amigos do Yan</title>
+</head>
+<body>
+    <header class="header purple-1">
+        <div>
+            <h3>Logo</h3>
+        </div>
+        <div>
+            <a class="header-option" href="#lista-de-amigos">Lista de amigos</a>
+            <a class="header-option" href="#" onclick="mostrarModal()">Cadastro de amigos</a>
+        </div>
+    </header>
+    <section id="lista-de-amigos">
+        <div class="container">
+            <div class="row">
+                <div class="tabela">
+                    <h1 class="text-center">Tabela de amigos</h1>
+                    </h1>
+                    <table class="style-tabela col-12 col-xs-12" id="table"> 
+                        <thead>
+                            <tr>
+                                <th>Foto</th>
+                                <th>Nome</th>
+                                <th>Telefone</th>
+                                <th>Churrascos Marcados</th>
+                                <th>País</th>
+                                <th>Opções</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>        
+    </section>
+    <div id="modal-cadastro" class="modal-container text-center">
+        <div class="modal">
+            <!-- <div class="container"> -->
+                <div class="row">
+                    <button class="fechar-modal">X</button>                    
+                    <form class="col-12 purple-1" method="GET" action=""> 
+                        <h2 class="text-center">CADASTRO DE AMIGO</h2>                       
+                        <div class="col-12 col-xs-12">
+                            <label class="col-6 col-xs-12 padding-initial" for="">Nome do seu amigo</label>
+                            <input class="col-12 border-radius-8 border-0"type="text" name="" id="nome_completo" placeholder="Preencha o campo...">
+                            <small class="col-12 padding-initial erro_msg" style="color: #ffffff; display: none;" id="erro_nome">Preencha o campo nome</small>
+                            <label class="col-6 col-xs-12 padding-initial" for="">Link da foto do seu amigo</label>
+                            <input class="col-12 border-radius-8 border-0" type="text" name="" id="link_foto" placeholder="Preencha o campo...">
+                            <small class="col-12 padding-initial erro_msg" style="color: #ffffff; display: none;" id="erro_link_invalido">Link inválido</small>
+                            <small class="col-12 padding-initial erro_msg" style="color: #ffffff; display: none;" id="erro_link_vazio">Preencha o campo link</small>
+                            <label class="col-6 col-xs-12 padding-initial" for="">Número de telefone dele/a</label>
+                            <input class="col-12 border-radius-8 border-0" maxlength="11" type="text" name="" id="telefone" placeholder="Preencha o campo...">
+                            <small class="col-12 padding-initial erro_msg" style="color: #ffffff; display: none;" id="erro_telefone_vazio">Preencha o campo telefone</small>
+                            <small class="col-12 padding-initial erro_msg" style="color: #ffffff; display: none;" id="erro_telefone_invalido">Somente números</small>
+                            <label class="col-6 col-xs-12 padding-initial" for="">Quantos churrascos já foram marcados</label>
+                            <input class="col-12 border-radius-8 border-0" type="text" name="" id="numero_vezes" placeholder="Preencha o campo...">
+                            <small class="col-12 padding-initial erro_msg" style="color: #ffffff; display: none;" id="erro_vezes_vazio">Preencha o campo número de vezes</small>
+                            <small class="col-12 padding-initial erro_msg" style="color: #ffffff; display: none;" id="erro_vezes_invalido">Somente números</small>
+                            <label class="col-6 col-xs-12 padding-initial" for="">País de origem</label>
+                            <select class="col-12 border-radius-8 border-0" name="" id="paises">
+                                <option value="brasil">BRASIL</option>
+                                <option value="paraguai">PARAGUAI</option>
+                                <option value="argentina">ARGENTINA</option>
+                                <option value="somalia">SOMÁLIA</option>
+                            </select>
+                            <button type="button" class="botao-enviar text-center" onclick="verificaForm()" id="botao_enviar">ADICIONAR</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            <!-- </div> -->
+        </div>
+    </div>
+    <footer class="purple-1 text-center">
+        <div class="text-center">
+            <a href="https://yanlipu.github.io">Feito por José Yan Lipu </a>
+          </div>
+    </footer>
+
+    
+
+
+<script src="./main.js">    
+</script>    
+</body>
+</html>
